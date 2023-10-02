@@ -1,6 +1,6 @@
 # Crypto
 
-Purpose 
+## Purpose 
 
 Encrypt and decrypt secret messages using the Playfair Cipher.  
 
