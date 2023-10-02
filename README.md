@@ -35,7 +35,9 @@ python crypto.py --algorithm playfair --mode decrypt --key "playfair example" --
 - Generate key table (5x5), remove duplicate letters from key, replace all “j”s with “i”s and remove any non-alphabet characters, continue creating the key with the remaining letters of the alphabet from A -> Z.
 
 Here is an example with "Playfair example" used as the keyword to create the key:
+
 <img width="199" alt="image" src="https://github.com/TamsynE/Crypto/assets/93171379/4eca6527-4753-4120-90f2-d20667a86484">
+
 
 - Split plaintext into digrams (groups of 2 letters), if both letters are the same (or only one letter is left), add "Q" after the first letter.
 - Encrypt the new pairs and continue.
