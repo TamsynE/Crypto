@@ -1,6 +1,6 @@
 # Crypto
 
-# Purpose 
+Purpose 
 Encrypt and decrypt secret messages using the Playfair Cipher.  The Playfair Cipher was invented in the mid-1800s and went unbroken for almost 75 years.  It was a British Cipher that was used in World War I and was similar to another cipher used by the Germans in WWI called the ADFGVX cipher.
 Files
 The main program file for this program is crypto.py which lets the user select from 3 different cipher methods: rail fence, substitution, or playfair cipher.  They are then prompted to choose a key and text to either encrypt or decrypt with.
