@@ -19,31 +19,33 @@ Requires python3 and the argparse module.
 ## Usage
 #### Encryption:
 python crypto.py -a playfair -m encrypt -k "playfair example" -t "Hide the gold in the tree stump"
-    OR
+   
+OR
 python crypto.py --algorithm playfair --mode encrypt --key "playfair example" --text "Hide the gold in the tree stump"
 
 #### Decryption:
 python crypto.py -a playfair -m decrypt -k "playfair example" -t "BMODZBXDNABEKUDMUIXMMOUVIF" 
-    OR
+    
+OR
 python crypto.py --algorithm playfair --mode decrypt --key "playfair example" --text "BMODZBXDNABEKUDMUIXMMOUVIF" 
 
 ## Playfair Rules
 
 ### Converting from plaintext to ciphertext
-- Generate key table (5x5), remove duplicate letters from key, replace all “j” with “i” and remove any non-alphabet characters, continue - alphabet from the last letter of the keyword.
-- Split plaintext into groups of 2 letters, if both letters are the same (or only one letter is left), add "X" after the first letter.
-- Encrypt the new pair and continue.
+- Generate key table (5x5), remove duplicate letters from key, replace all “j”s with “i”s and remove any non-alphabet characters, continue creating the key with the remaining letters of the alphabet from A -> Z.
+- Split plaintext into digrams (groups of 2 letters), if both letters are the same (or only one letter is left), add "Q" after the first letter.
+- Encrypt the new pairs and continue.
 - If the pair of letters are on the same row of your key table, replace them with the letters to their immediate right and wrap around to the beginning of the row if needed.
 - If the pair of letters are on the same column of your key table, replace them with the letters immediately below and wrap around to the top of the column if needed.
-- If the letters are not on the same row or column, create a rectangle with the two letters and replace the letters with the corresponding letter in the same row.
+- If the letters are not on the same row or column, create a rectangle with the two letters and replace the letters with the corresponding corner letters in the same row but in line with the other letter in the digram.
   
 ### Converting from ciphertext to plaintext
 
-- Generate key table (5x5), remove duplicate letters from key, replace all “j” with “i” and remove any non-alphabet characters, continue alphabet from the last letter of the keyword.
-- Split ciphertext into groups of 2 letters, if the pair of letters are in the same row of your key table, replace them with the letters to their immediate left and wrap around to the end of the row if needed.
+- Generate key table (5x5) as done for encryption.
+- Split ciphertext into digrams, if the pair of letters are in the same row of your key table, replace them with the letters to their immediate left and wrap around to the end of the row if needed.
 - If the pair of letters are on the same column of your key table, replace them with the letters immediately above and wrap around to the bottom of the column if needed.
 - If the letters are not on the same row or column, create a rectangle with the two letters and replace the letters with the corresponding letter in the same row.
-- (last step) Locate all “X”s in plaintext.  Check letters to the immediate right and left and if they are the same or if “X” is the last letter, remove “X”
+- Locate all “Q”s in plaintext.  Check letters to the immediate right and left and if they are the same or if “Q” is the last letter, remove “Q”
     
 ## Testing
 
