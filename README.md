@@ -42,8 +42,20 @@ Here is an example with "Playfair example" used as the keyword to create the key
 - Split plaintext into digrams (groups of 2 letters), if both letters are the same (or only one letter is left), add "Q" after the first letter.
 - Encrypt the new pairs and continue.
 - If the pair of letters are on the same row of your key table, replace them with the letters to their immediate right and wrap around to the beginning of the row if needed.
+
+<img width="172" alt="image" src="https://github.com/TamsynE/Crypto/assets/93171379/be5d08fb-ee06-425b-ab0d-ab09c0bfc3ad">
+
+
 - If the pair of letters are on the same column of your key table, replace them with the letters immediately below and wrap around to the top of the column if needed.
+
+<img width="159" alt="image" src="https://github.com/TamsynE/Crypto/assets/93171379/2da2ba42-3e17-40b6-b9c7-ec8da61b0453">
+
+
 - If the letters are not on the same row or column, create a rectangle with the two letters and replace the letters with the corresponding corner letters in the same row but in line with the other letter in the digram.
+
+<img width="159" alt="image" src="https://github.com/TamsynE/Crypto/assets/93171379/6f9b94fe-4ef6-4d95-a4f0-c0961cca7952">
+
+
   
 ### Converting from ciphertext to plaintext
 
