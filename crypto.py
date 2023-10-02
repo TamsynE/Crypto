@@ -129,7 +129,7 @@ class Playfair:
 
         while i < len(text):
             ch = text[i]
-            x_notx = 'Q'
+            q_notq = 'Q'
 
             # check if there is a next character and if it matches the previous character
             if i +1 < len(text) and text[i+1] == ch:
@@ -137,11 +137,11 @@ class Playfair:
 
             else:
                 if i+1 < len(text):
-                    x_notx = text[i +1] 
+                    q_notq = text[i +1] 
                 else:
-                    x_notx = 'Q'
+                    q_notq = 'Q'
             
-            digrams.append(ch + x_notx)
+            digrams.append(ch + q_notq)
             i+=2
 
             # if last character is by itself
