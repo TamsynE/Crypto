@@ -275,6 +275,7 @@ class Playfair:
         return encrypted_text
 
     def decode_playfair_cipher(self, text):
+        """ Takes out Q in final plaintext. """
         text_orig = text.lower()
         text_new = ""
 
